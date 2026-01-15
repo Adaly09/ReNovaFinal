@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PRESENTACION RENOVA</title>
+
+    <style>
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .menu {
+            background-color: #2f6f45;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            padding: 15px 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #3f8f5a;
+        }
+
+        header {
+            background-color: #5a9654;
+            color: #ffffff;
+            padding: 25px 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+            color: #5a9654
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 18px;
+        }
+
+        
+        main {
+            flex: 1;
+            padding: 30px 20px;
+        }
+
+        main img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            margin: 6px 0;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #2f6f45;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 15px auto;
+            font-size: 17px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #8bc2d3;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #64d0c4;
+        }
+
+        footer {
+            background-color: #5a9654;
+            color: white;
+            padding: 15px 0;
+            font-size: 14px;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        main h1 {
+            color: #2f6f45;
+            margin-bottom: 20px;
+        }
+
+        main h2 {
+            color: #2f6f45;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        main p {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+         }
+
+        .lista-info {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto 25px auto;
+            max-width: 600px;
+        }
+
+        .lista-info li {
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="menu">
+    <a href="{{ url_for('video') }}">Video</a>
+    <a href="{{ url_for('preguntasvideo') }}">Preguntas video</a>
+    <a href="{{ url_for('informacion') }}">Información</a>
+    <a href="{{ url_for('preguntasinfo') }}">Preguntas información</a>
+    <a href="{{ url_for('agradecimiento') }}">Agradecimiento</a>
+</nav>
+
+<main>
+
+    <h1>¿Qué es el reciclaje inteligente?</h1>
+
+    <p>
+        El reciclaje inteligente es una forma moderna y eficiente de manejar los residuos,
+        que combina el reciclaje tradicional con el uso de tecnología para reducir el impacto
+        ambiental y mejorar la separación de la basura.
+    </p>
+
+    <p>
+        Su objetivo principal es aprovechar mejor los materiales, disminuir la contaminación
+        y promover una cultura ambiental responsable.
+    </p>
+
+    <h2>¿Por qué es importante el reciclaje inteligente?</h2>
+
+    <ul class="lista-info">
+        <li>Reduce la cantidad de basura que llega a los rellenos sanitarios</li>
+        <li>Disminuye la contaminación del suelo, aire y agua</li>
+        <li>Ahorra energía y recursos naturales</li>
+        <li>Reduce las emisiones de gases contaminantes</li>
+        <li>Fomenta la educación ambiental en la sociedad</li>
+    </ul>
+
+    <h2>Tecnología en el reciclaje inteligente</h2>
+
+    <ul class="lista-info">
+        <li>Sensores para detectar el tipo de residuo</li>
+        <li>Contenedores inteligentes que indican cuándo están llenos</li>
+        <li>Aplicaciones móviles que enseñan a reciclar correctamente</li>
+        <li>Inteligencia artificial para clasificar residuos</li>
+        <li>Códigos QR con información educativa</li>
+    </ul>
+
+    <p>
+        Estas herramientas ayudan a que el proceso sea más rápido,
+        eficiente y correcto.
+    </p>
+
+    <h2>Tipos de residuos y su separación</h2>
+
+    <ul class="lista-info">
+        <li><strong>Orgánicos:</strong> restos de comida, cáscaras, residuos biodegradables</li>
+        <li><strong>Inorgánicos reciclables:</strong> plástico, vidrio, papel, cartón, metal</li>
+        <li><strong>Inorgánicos no reciclables:</strong> pañales, colillas, papel higiénico</li>
+        <li><strong>Residuos especiales:</strong> pilas, electrónicos, medicamentos</li>
+    </ul>
+
+    <h2>Beneficios del reciclaje inteligente</h2>
+
+    <ul class="lista-info">
+        <li>Mejora la calidad de vida</li>
+        <li>Protege los ecosistemas</li>
+        <li>Reduce el desperdicio</li>
+        <li>Promueve ciudades más limpias</li>
+        <li>Impulsa el desarrollo sostenible</li>
+    </ul>
+
+</main>

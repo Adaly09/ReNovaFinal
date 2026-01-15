@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Preguntas del Video | RENOVA</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        
+        .menu {
+            background-color: #2f6f45;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            padding: 15px 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #3f8f5a;
+        }
+
+        
+        header {
+            background-color: #5a9654;
+            color: #ffffff;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        main {
+            flex: 1;
+            padding: 40px 20px;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 25px;
+            font-size: 18px;
+            color: #2f6f45;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 80px;
+            margin-top: 8px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            font-size: 16px;
+            background-color: #2f6f45;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3f8f5a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="menu">
+        <a href="{{ url_for('video') }}">Video</a>
+        <a href="{{ url_for('preguntasvideo') }}">Preguntas video</a>
+        <a href="{{ url_for('informacion') }}">Información</a>
+        <a href="{{ url_for('preguntasinfo') }}">Preguntas información</a>
+        <a href="{{ url_for('agradecimiento') }}">Agradecimiento</a>
+    </nav>
+
+    <header>
+        <h1>Preguntas sobre el video</h1>
+        <p>
+            Respecto al video que acabas de observar, queremos conocer tu opinión y
+            reforzar lo aprendido. A continuación, te haremos algunas preguntas
+            relacionadas con el reciclaje inteligente.
+        </p>
+    </header>
+
+    <main>
+        <form method="POST">
+            <ol>
+                <li>
+                    ¿Cuál es la importancia del reciclaje inteligente?
+                    <textarea name="p1" required></textarea>
+                </li>
+
+                <li>
+                    ¿Cuál es la funcionalidad de cada bote de basura?
+                    <textarea name="p2" required></textarea>
+                </li>
+
+                <li>
+                    ¿Qué tan importante es el reciclaje inteligente para ti?
+                    <textarea name="p3" required></textarea>
+                </li>
+            </ol>
+
+            <button type="submit">Enviar respuestas</button>
+        </form>
+    </main>
+
+</body>
+</html>
